@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Name Input Section -->
+        <div id="nameSection">
+            <h2>Enter Your Name</h2>
+            <input type="text" id="username" placeholder="Enter your name">
+            <button onclick="startQuiz()" class="btn">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quizSection" style="display:none;">
+            <h2 id="question"></h2>
+            <div id="options"></div>
+            <button onclick="nextQuestion()" class="btn">Next</button>
+            <h3 id="result"></h3>
+            <h3 id="percentage"></h3>
+
+            <button onclick="downloadCertificate()" 
+                    class="btn secondary" 
+                    id="certificateBtn" 
+                    style="display:none;">
+                Download Certificate
+            </button>
+
+            <br><br>
+            <a href="index.html" class="btn">Home</a>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
